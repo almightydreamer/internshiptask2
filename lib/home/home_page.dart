@@ -14,19 +14,31 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  void initState() {
+    super.initState();
+    Get.put(HomeController());
+    final HomeController homeController = Get.find();
+    homeController.getData();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
           padding: const EdgeInsets.only(left: 16, top: 63, right: 16),
-          color: CustomColor.Background,
-          child: Column(children: const [
-            TitleWidget(title: 'Start New Goal'),
-
-            GoalsCarouselWidget(),
-            TitleWidget(title: 'Daily Task'),
-            //TasksListWidget,
-          ],)),
+          color: CustomColor.background,
+          child: ListView(
+            shrinkWrap: true,
+            children: const [
+              TitleWidget(title: 'Start New Goal'),
+              Padding(
+                padding: EdgeInsets.only(top: 16, bottom: 32),
+                child: GoalsCarouselWidget(),
+              ),
+              TitleWidget(title: 'Daily Task'),
+              //TasksListWidget,
+            ],
+          )),
     );
   }
-
 }
