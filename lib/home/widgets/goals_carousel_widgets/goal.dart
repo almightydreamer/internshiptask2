@@ -32,7 +32,7 @@ class GoalWidget extends StatelessWidget {
                 borderRadius: const BorderRadius.all(Radius.circular(24))),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Container(
+              SizedBox(
                   height: 144,
                   width: double.infinity,
                   child: ClipRRect(
@@ -56,7 +56,7 @@ class GoalWidget extends StatelessWidget {
                       primaryColor: CustomColor.timeIndexPrimary,
                       secondaryColor: CustomColor.timeIndexSecondary,
                       value: '${Duration(seconds: durationSeconds).inMinutes} min'),
-                  SizedBox(width:16),
+                  const SizedBox(width:16),
                   ValueWidget(
                       icon: Vector.calories,
                       primaryColor: CustomColor.burnIndexPrimary,
@@ -65,9 +65,13 @@ class GoalWidget extends StatelessWidget {
                 ]),
               )
             ])),
-        Padding(
-            padding: EdgeInsets.only(top: 124, left: 280),
-            child: ButtonWidget()),
+        const Positioned(
+          top: 0,
+          right: 0,
+          child: Padding(
+              padding: EdgeInsets.only(top: 124, right: 24),
+              child: ButtonWidget()),
+        ),
       ],
     );
   }

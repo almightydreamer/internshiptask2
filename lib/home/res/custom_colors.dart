@@ -17,9 +17,16 @@ class CustomColor{
   static Color burnIndexPrimary = const Color(0xFFFFB605);
   static Color burnIndexSecondary = const Color(0xFFFFFAEE);
 
-  static Color startIcon = const Color(0xFFF8753D);
-  static Color startButtonPrimary = const Color(0xFFF7F8F8);
-  static Color startButtonSecondary = const Color(0xFFFFFFFF);
+  static Color goalStartIcon = const Color(0xFFF8753D);
+  static Color goalStartButtonPrimary = const Color(0xFFF7F8F8);
+  static Color goalStartButtonSecondary = const Color(0xFFFFFFFF);
+
+  static Color taskStartIcon = const Color(0xFFF8753D);
+  static Color taskStartButtonPrimary = const Color(0xFFEFEFEF);
+  static Color taskStartButtonSecondary = const Color(0xFFFFFFFF);
+
+  static Color taskTitle = const Color(0xFF00132C);
+
 
 
 }

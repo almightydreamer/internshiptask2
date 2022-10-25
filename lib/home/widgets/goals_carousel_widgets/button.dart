@@ -7,20 +7,20 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  return SizedBox.square(
-    dimension: 40,
+    return SizedBox.square(
+      dimension: 40,
       child: RawMaterialButton(
-        shape: const CircleBorder(),
-          fillColor: CustomColor.startButtonPrimary,
-        highlightColor: CustomColor.startButtonSecondary,
-        onPressed: (){},
-        child: Vector.start
+          shape: const CircleBorder(),
+          fillColor: CustomColor.goalStartButtonSecondary,
+          highlightColor: CustomColor.goalStartButtonPrimary,
+          onPressed: () {},
+          child: LayoutBuilder(
+              builder: (context, constraints) {
+                return Center(child: SizedBox.square(
+                    dimension: constraints.maxHeight / 2, child: Vector.start));
+              }
 
-
-      ),
+          )),
     );
-
-
-
   }
 }

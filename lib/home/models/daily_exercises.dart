@@ -1,17 +1,17 @@
-class DailyExercises {
+class Exercise {
   final String title;
   final String cover;
   final int caloriesCount;
   final int durationSeconds;
 
-  const DailyExercises({
+  const Exercise({
     required this.title,
     required this.cover,
     required this.caloriesCount,
     required this.durationSeconds
 });
 
-  static DailyExercises fromJson(json) => DailyExercises(
+  static Exercise fromJson(json) => Exercise(
       cover: json['cover'],
       title: json['title'],
       caloriesCount: json['calories_count'],
