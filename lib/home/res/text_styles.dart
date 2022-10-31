@@ -3,7 +3,7 @@ import 'custom_colors.dart';
 import 'package:internshiptask2/util/fonts.dart';
 
 class TextStyles {
-
+  static TextStyle appBarTitle = TextStyle(fontFamily: Fonts.poppinsRegular, fontSize: 32, color: CustomColor.appBarTitle, fontWeight: FontWeight.w800);
   static TextStyle tabTitle = TextStyle(fontFamily: Fonts.poppinsRegular, fontSize: 18, color: CustomColor.tabTitle, fontWeight: FontWeight.w600);
   static TextStyle tabSeeAll = TextStyle(fontFamily: Fonts.poppinsRegular, fontSize: 14, color: CustomColor.tabSeeAll, fontWeight: FontWeight.w600);
   static TextStyle goalTitle = TextStyle(fontFamily: Fonts.poppinsRegular, fontSize: 24, color: CustomColor.goalTitle, fontWeight: FontWeight.w600);

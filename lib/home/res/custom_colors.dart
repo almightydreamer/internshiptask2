@@ -2,6 +2,11 @@ import 'dart:ui';
 
 class CustomColor{
   static Color background = const Color(0xFFF5F5F5);
+  static Color appBarBackground = const Color(0xFFF8753D);
+  static Color appBarTitle = const Color(0xFFF5F5F5);
+
+  static Color sliderBackground = const Color(0xFFF8753D);
+
 
   static Color tabTitle = const Color(0xFF00132C);
   static Color tabDescription = const Color(0xFF949E9F);
