@@ -1,6 +1,7 @@
 CREATE TABLE currentUser (
     requestToken TEXT NOT NULL,
     accessToken TEXT NOT NULL,
+    id INTEGER NOT NULL,
     fullName TEXT NOT NULL,
     emailAddress TEXT NOT NULL,
     phoneNumber TEXT NOT NULL,

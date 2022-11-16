@@ -16,7 +16,7 @@ class Cache extends _$Cache {
   Cache() : super(_openConnection());
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   Stream<List<CurrentUserData>> getUsersStream(){
     var query = select(currentUser);

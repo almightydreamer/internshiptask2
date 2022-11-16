@@ -5,9 +5,9 @@ import '../../../domain/core/request/response.dart';
 import '../../core/api_constants.dart';
 import '../../core/request_headers.dart';
 import '../dto/request_token_dto.dart';
-import '../dto/user_dto.dart';
+import '../dto/user_api_dto.dart';
 
-class UserRemoteDataSource {
+class UserApiDataSource {
   final Dio _dio = Dio();
   var requestHeaders = RequestParameters.requestHeaders;
 

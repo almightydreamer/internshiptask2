@@ -1,29 +1,22 @@
-
 import 'dart:io';
 
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
+import 'package:internshiptask2/clean_architecture/data/core/db/tables.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart' as p;
 
-part 'token_cache.g.dart';
-
+part 'db.g.dart';
 
 @DriftDatabase(
-  include: {'cache.drift'},
+  tables:[User, Authorization]
 )
-class Cache extends _$Cache {
-  Cache() : super(_openConnection());
+class LocalDatabase extends _$LocalDatabase {
+  LocalDatabase() : super(_openConnection());
 
   @override
-  int get schemaVersion => 3;
-
-  Stream<List<CurrentUserData>> getUsersStream(){
-    var query = select(currentUser);
-    return query.watch();
-  }
+  int get schemaVersion => 2;
 }
-
 
 LazyDatabase _openConnection() {
   // the LazyDatabase util lets us find the right location for the file async.
@@ -36,7 +29,3 @@ LazyDatabase _openConnection() {
     return NativeDatabase(file);
   });
 }
-
-
-
-

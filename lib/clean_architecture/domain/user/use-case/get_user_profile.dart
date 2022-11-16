@@ -9,7 +9,15 @@ class GetUserProfile {
 
   GetUserProfile(this.repository);
 
-  Future<Either<Failure, UserProfileEntity>> call() async {
-    return await repository.getUserProfile();
+  Stream<Either<Failure, UserProfileEntity>> call() async* {
+    var dbResponse = await repository.getLocalUserProfile();
+    UserProfileEntity? userProfileEntity;
+    dbResponse.fold((l) => null, (r) {
+      userProfileEntity = r;
+    });
+    if (userProfileEntity != null) {
+      yield Right(userProfileEntity!);
+    }
+    yield await repository.getApiUserProfile();
   }
 }
